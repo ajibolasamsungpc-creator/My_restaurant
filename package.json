@@ -1,0 +1,35 @@
+{
+  "name": "my-resturant",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ajibolasamsungpc-creator/My_restaurant#readme",
+  "bugs": {
+    "url": "https://github.com/ajibolasamsungpc-creator/My_restaurant/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajibolasamsungpc-creator/My_restaurant.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build && npm run dev"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "flutterwave-node-v3": "^1.4.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.2",
+    "nodemailer": "^10.0.10",
+    "nodemon": "^3.1.14",
+    "socket.io": "^4.8.3"
+  }
+}
