@@ -1,0 +1,257 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: #090d12;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-page::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  top: -340px;
+  left: -260px;
+  border-radius: 50%;
+  background: rgba(255, 107, 26, 0.08);
+  filter: blur(100px);
+}
+
+.admin-login-page::after {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  right: -280px;
+  bottom: -300px;
+  border-radius: 50%;
+  background: rgba(255, 107, 26, 0.06);
+  filter: blur(100px);
+}
+
+.admin-login-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 440px);
+  padding: 46px 44px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background: rgba(17, 22, 29, 0.96);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.admin-login-header {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.admin-login-header p {
+  margin: 0 0 16px;
+  color: #ff7b32;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admin-login-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(28px, 5vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.admin-login-header span {
+  display: block;
+  max-width: 290px;
+  margin: 12px auto 0;
+  color: #7f8996;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-login-card form label {
+  margin-top: 8px;
+  color: #d9dee5;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-login-card form label:first-child {
+  margin-top: 0;
+}
+
+.admin-login-card form input {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 15px;
+  border: 1px solid #29313b;
+  border-radius: 12px;
+  outline: none;
+  background: #0c1117;
+  color: #ffffff;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.admin-login-card form input::placeholder {
+  color: #56606c;
+}
+
+.admin-login-card form input:hover {
+  border-color: #37414d;
+}
+
+.admin-login-card form input:focus {
+  border-color: #ff6b1a;
+  background: #0f141b;
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 26, 0.1);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 72px;
+}
+
+.admin-login-card form .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  min-height: auto;
+  width: 32px;
+  margin: 0;
+  padding: 8px 4px;
+  border: 0;
+  background: transparent;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.admin-login-card form .password-toggle:hover,
+.admin-login-card form .password-toggle:focus-visible {
+  background: transparent;
+}
+
+.password-eye {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 14px;
+  border: 2px solid #ff7b32;
+  border-radius: 75% 15%;
+  transform: rotate(45deg);
+  transition: border-color 0.2s ease;
+}
+
+.password-eye-pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff7b32;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: background 0.2s ease;
+}
+
+.password-eye.is-visible {
+  border-color: #ff9a63;
+}
+
+.password-eye.is-visible .password-eye-pupil {
+  background: #ff9a63;
+}
+
+.admin-login-card form .password-toggle:hover .password-eye,
+.admin-login-card form .password-toggle:focus-visible .password-eye {
+  border-color: #ffb58d;
+}
+
+.admin-login-card form button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #ff6b1a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-login-card form button:hover:not(:disabled) {
+  background: #ff7a2f;
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 25px rgba(255, 107, 26, 0.22);
+}
+
+.admin-login-card form button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.admin-login-card form button:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.forgot-password {
+  display: block;
+  margin: 24px auto 0;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: #ff7b32;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #ff9a63;
+}
+
+.forgot-message {
+  margin: 20px 0 0;
+  text-align: center;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .admin-login-page {
+    padding: 28px 16px;
+  }
+
+  .admin-login-card {
+    padding: 36px 24px 30px;
+    border-radius: 20px;
+  }
+}
